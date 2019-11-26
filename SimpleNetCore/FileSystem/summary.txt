@@ -1,0 +1,8 @@
+﻿---------------------------旧的文件读取还是使用System.IO中的File，Directory-------------------
+
+
+--------------------------新的文件结构----------------------------------
+1、文件显示树形结构
+2、物理文件需引入Microsoft.Extensions.FileProviders.Physical;嵌入式文件需引入Microsoft.Extensions.FileProviders.Embedded
+(如需注入则引入Microsoft.Extensions.DependencyInjection)
+3、文件基于IFileProvider。物理文件提供类PhysicalFileProvider，嵌入式文件提供类EmbeddedFileProvider
