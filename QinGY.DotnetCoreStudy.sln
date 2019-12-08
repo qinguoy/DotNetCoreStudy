@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QinGY.DotnetCoreStudy.SimpleNetCore", "SimpleNetCore\QinGY.DotnetCoreStudy.SimpleNetCore.csproj", "{012D116F-9DB4-47D2-9F08-C844191DDF3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QinGY.DotnetCoreStudy.SimpleNetCore", "SimpleNetCore\QinGY.DotnetCoreStudy.SimpleNetCore.csproj", "{012D116F-9DB4-47D2-9F08-C844191DDF3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QinGY.DotnetCoreStudy.TestConsole", "QinGY.DotnetCoreStudy.TestConsole\QinGY.DotnetCoreStudy.TestConsole.csproj", "{5DD80072-4573-4481-8664-2F3223FAB70B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QinGY.DotnetCoreStudy.TestConsole", "QinGY.DotnetCoreStudy.TestConsole\QinGY.DotnetCoreStudy.TestConsole.csproj", "{5DD80072-4573-4481-8664-2F3223FAB70B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreStudy.SystemData", "DotNetCoreStudy.SystemData\DotNetCoreStudy.SystemData.csproj", "{908B4B0F-7C72-4673-B351-A5A7AD4A5D67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5DD80072-4573-4481-8664-2F3223FAB70B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DD80072-4573-4481-8664-2F3223FAB70B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DD80072-4573-4481-8664-2F3223FAB70B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{908B4B0F-7C72-4673-B351-A5A7AD4A5D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{908B4B0F-7C72-4673-B351-A5A7AD4A5D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{908B4B0F-7C72-4673-B351-A5A7AD4A5D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{908B4B0F-7C72-4673-B351-A5A7AD4A5D67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
