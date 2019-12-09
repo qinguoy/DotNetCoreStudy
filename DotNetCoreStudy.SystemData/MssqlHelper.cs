@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace DotNetCoreStudy.SystemData
+namespace QinGy.DotNetCoreStudy.SystemData
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class MssqlHelper
     {
         /// <summary>
@@ -19,9 +22,9 @@ namespace DotNetCoreStudy.SystemData
         /// <param name="parameters"></param>
         /// <param name="cmdType"></param>
         /// <returns></returns>
-        public static int ExecuteSql(string cmdString, Dictionary<string, object> parameters, CommandType cmdType=CommandType.Text)
-        { 
-            using (var conn =new SqlConnection(ConnectionString))
+        public static int ExecuteSql(string cmdString, Dictionary<string, object> parameters, CommandType cmdType = CommandType.Text)
+        {
+            using (var conn = new SqlConnection(ConnectionString))
             {
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand(cmdString, conn))
@@ -31,13 +34,13 @@ namespace DotNetCoreStudy.SystemData
                     {
                         foreach (var item in parameters)
                         {
-                            cmd.Parameters.Add(new SqlParameter(item.Key,item.Value));
-                        } 
+                            cmd.Parameters.Add(new SqlParameter(item.Key, item.Value));
+                        }
                     }
                     return cmd.ExecuteNonQuery();
-                } 
+                }
             }
-               
+
         }
         /// <summary>
         /// 查询，返回DataTable
@@ -51,15 +54,15 @@ namespace DotNetCoreStudy.SystemData
             using (var conn = new SqlConnection(ConnectionString))
             {
                 using (var cmd = new SqlCommand(cmdString, conn))
-                { 
+                {
                     conn.Open();
                     cmd.CommandType = cmdType;
                     if (parameters != null && parameters.Count > 0)
                     {
                         foreach (var item in parameters)
                         {
-                            cmd.Parameters.Add(new SqlParameter(item.Key,item.Value));
-                        } 
+                            cmd.Parameters.Add(new SqlParameter(item.Key, item.Value));
+                        }
                     }
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -76,7 +79,7 @@ namespace DotNetCoreStudy.SystemData
         /// <param name="parameters"></param>
         /// <param name="cmdType"></param>
         /// <returns></returns>
-        public static DataSet QueryToDataSet(string cmdString, Dictionary<string, object> parameters, CommandType cmdType=CommandType.Text)
+        public static DataSet QueryToDataSet(string cmdString, Dictionary<string, object> parameters, CommandType cmdType = CommandType.Text)
         {
             using (var conn = new SqlConnection(ConnectionString))
             {
@@ -88,8 +91,8 @@ namespace DotNetCoreStudy.SystemData
                     {
                         foreach (var item in parameters)
                         {
-                            cmd.Parameters.Add(new SqlParameter(item.Key, item.Value)); 
-                        } 
+                            cmd.Parameters.Add(new SqlParameter(item.Key, item.Value));
+                        }
                     }
                     DataSet ds = new DataSet();
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -106,7 +109,7 @@ namespace DotNetCoreStudy.SystemData
         /// <param name="dataTable"></param>
         /// <param name="targetTableName"></param>
         /// <param name="timeoutSecond"></param>
-        public static void SaveBySqlBulkCopy(DataTable dataTable, string targetTableName, int timeoutSecond=600)
+        public static void SaveBySqlBulkCopy(DataTable dataTable, string targetTableName, int timeoutSecond = 600)
         {
             using (var conn = new SqlConnection(ConnectionString))
             {
@@ -114,10 +117,10 @@ namespace DotNetCoreStudy.SystemData
                 {
                     bulkCopy.BulkCopyTimeout = timeoutSecond;
                     bulkCopy.DestinationTableName = targetTableName;
-                    bulkCopy.WriteToServer(dataTable); 
+                    bulkCopy.WriteToServer(dataTable);
                 }
             }
         }
-        
+
     }
 }
