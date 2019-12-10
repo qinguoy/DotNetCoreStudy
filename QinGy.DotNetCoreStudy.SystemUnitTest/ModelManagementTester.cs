@@ -7,7 +7,10 @@ using System.Collections.Generic;
 
 namespace QinGy.DotNetCoreStudy.SystemUnitTest
 {
-    public class UnitTest1
+    /// <summary>
+    /// 
+    /// </summary>
+    public class ModelManagementTester
     {
         [Fact]
         public void TestGenerateTableToModelList()

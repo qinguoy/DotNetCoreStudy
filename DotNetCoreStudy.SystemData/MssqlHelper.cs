@@ -16,33 +16,6 @@ namespace QinGy.DotNetCoreStudy.SystemData
         public static string ConnectionString { get; set; }
 
         /// <summary>
-        /// 执行sql,返回受影响行数
-        /// </summary>
-        /// <param name="cmdString"></param>
-        /// <param name="parameters"></param>
-        /// <param name="cmdType"></param>
-        /// <returns></returns>
-        public static int ExecuteSql(string cmdString, Dictionary<string, object> parameters, CommandType cmdType = CommandType.Text)
-        {
-            using (var conn = new SqlConnection(ConnectionString))
-            {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(cmdString, conn))
-                {
-                    cmd.CommandType = cmdType;
-                    if (parameters != null && parameters.Count > 0)
-                    {
-                        foreach (var item in parameters)
-                        {
-                            cmd.Parameters.Add(new SqlParameter(item.Key, item.Value));
-                        }
-                    }
-                    return cmd.ExecuteNonQuery();
-                }
-            }
-
-        }
-        /// <summary>
         /// 查询，返回DataTable
         /// </summary>
         /// <param name="cmdString"></param>
@@ -101,6 +74,33 @@ namespace QinGy.DotNetCoreStudy.SystemData
                 }
 
             }
+        }
+        /// <summary>
+        /// 执行sql,返回受影响行数
+        /// </summary>
+        /// <param name="cmdString"></param>
+        /// <param name="parameters"></param>
+        /// <param name="cmdType"></param>
+        /// <returns></returns>
+        public static int ExecuteNonQuerySql(string cmdString, Dictionary<string, object> parameters, CommandType cmdType = CommandType.Text)
+        {
+            using (var conn = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(cmdString, conn))
+                {
+                    cmd.CommandType = cmdType;
+                    if (parameters != null && parameters.Count > 0)
+                    {
+                        foreach (var item in parameters)
+                        {
+                            cmd.Parameters.Add(new SqlParameter(item.Key, item.Value));
+                        }
+                    }
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+
         }
 
         /// <summary>
