@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QinGy.MarketPlatform.ProductCenterEntity;
 
 namespace QinGy.MarketPlatform.ProductCenterEntity.Migrations
 {
     [DbContext(typeof(ProductCenterContext))]
-    partial class ProductCenterContextModelSnapshot : ModelSnapshot
+    [Migration("20191223155521_20191223001")]
+    partial class _20191223001
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

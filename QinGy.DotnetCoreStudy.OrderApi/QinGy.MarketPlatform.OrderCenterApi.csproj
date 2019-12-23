@@ -6,7 +6,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath>bin</OutputPath>
-    <DocumentationFile>bin\netcoreapp3.1\QinGy.MarketPlatform.OrderApi.xml</DocumentationFile>
+    <DocumentationFile>bin\netcoreapp3.1\QinGy.MarketPlatform.OrderCenterApi.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

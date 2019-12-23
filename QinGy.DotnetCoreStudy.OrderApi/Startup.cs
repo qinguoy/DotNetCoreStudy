@@ -31,10 +31,10 @@ namespace QinGy.MarketPlatform.OrderApi
             //添加SwaggerGen，配置api说明xml文档
             services.AddSwaggerGen(p =>
             {
-                p.SwaggerDoc("orderapi",
+                p.SwaggerDoc("ordercenterapi",
                     new OpenApiInfo { Title = "OrderApi", Version = "v1" }
                     );
-                string xmlPath = Path.Combine(AppContext.BaseDirectory, "QinGy.MarketPlatform.OrderApi.xml"); //程序说明xml文档路径
+                string xmlPath = Path.Combine(AppContext.BaseDirectory, "QinGy.MarketPlatform.OrderCenterApi.xml"); //程序说明xml文档路径
                 p.IncludeXmlComments(xmlPath);
             });
         }
@@ -51,7 +51,7 @@ namespace QinGy.MarketPlatform.OrderApi
 
             app.UseSwaggerUI(p =>
             {
-                p.SwaggerEndpoint("/orderapi/swagger.json", "orderapi v1");
+                p.SwaggerEndpoint("/ordercenterapi/swagger.json", "orderapi v1");
                // p.SwaggerEndpoint("/swagger/v1/swagger.json", "OrderApi V1");//注意v1是与AddSwaggerGen中指定的名称一致
             });
 

@@ -49,10 +49,11 @@ namespace QinGy.MarketPlatform.ProductCenterApi
                 app.UseDeveloperExceptionPage();
             }
             //注册swagger插件
-            app.UseSwagger();
+            app.UseSwagger(p=>p.RouteTemplate= "{documentName}/swagger.json");
             app.UseSwaggerUI(p =>
             {
-                p.SwaggerEndpoint("/swagger/v1/swagger.json", "ProductApi V1");//注意v1是与AddSwaggerGen中指定的名称一致
+                p.SwaggerEndpoint("/productcenterapi/swagger.json", "productapi v1");
+               // p.SwaggerEndpoint("/swagger/v1/swagger.json", "ProductApi V1");//注意v1是与AddSwaggerGen中指定的名称一致
             });
             app.UseHttpsRedirection();
 
