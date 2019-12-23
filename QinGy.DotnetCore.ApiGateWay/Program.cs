@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace QinGy.DotnetCore.ApiGateWay
+namespace QinGy.MarketPlatform.ApiGateWay
 {
     public class Program
     {

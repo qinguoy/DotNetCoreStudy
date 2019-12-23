@@ -14,7 +14,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace QinGy.DotnetCoreStudy.ProductApi
+namespace QinGy.MarketPlatform.ProductCenterApi
 {
     public class Startup
     {
@@ -35,7 +35,7 @@ namespace QinGy.DotnetCoreStudy.ProductApi
                 p.SwaggerDoc("v1",
                     new OpenApiInfo { Title = "ProductApi", Version = "v1" }
                     );
-                string xmlPath = Path.Combine(AppContext.BaseDirectory, "QinGy.DotnetCoreStudy.ProductApi.xml"); //程序说明xml文档路径
+                string xmlPath = Path.Combine(AppContext.BaseDirectory, "QinGy.MarketPlatform.ProductCenterApi.xml"); //程序说明xml文档路径
                 p.IncludeXmlComments(xmlPath);
             });
 

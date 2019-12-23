@@ -6,7 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
-namespace QinGy.DotnetCore.ApiGateWay
+namespace QinGy.MarketPlatform.ApiGateWay
 {
     public class Startup
     {

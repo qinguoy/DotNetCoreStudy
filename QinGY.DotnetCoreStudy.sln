@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.106
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QinGY.DotnetCoreStudy.SimpleNetCore", "SimpleNetCore\QinGY.DotnetCoreStudy.SimpleNetCore.csproj", "{012D116F-9DB4-47D2-9F08-C844191DDF3D}"
 EndProject
@@ -9,7 +9,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QinGY.DotnetCoreStudy.TestC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QinGy.DotNetCoreStudy.SystemData", "DotNetCoreStudy.SystemData\QinGy.DotNetCoreStudy.SystemData.csproj", "{908B4B0F-7C72-4673-B351-A5A7AD4A5D67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QinGy.DotNetCoreStudy.SystemUnitTest", "QinGy.DotNetCoreStudy.SystemUnitTest\QinGy.DotNetCoreStudy.SystemUnitTest.csproj", "{6828B478-5231-4394-8EB6-486766513BAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QinGy.DotNetCoreStudy.SystemUnitTest", "QinGy.DotNetCoreStudy.SystemUnitTest\QinGy.DotNetCoreStudy.SystemUnitTest.csproj", "{6828B478-5231-4394-8EB6-486766513BAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GateWay", "GateWay", "{B6B8C950-CBA6-4D0B-8D0A-882E2D4299BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QinGy.MarketPlatform.ProductCenterApi", "QinGy.DotnetCoreStudy.ProductApi\QinGy.MarketPlatform.ProductCenterApi.csproj", "{DEB454DF-BA7E-4793-BCD7-8CE888C2BD3A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QinGy.MarketPlatform.OrderCenterApi", "QinGy.DotnetCoreStudy.OrderApi\QinGy.MarketPlatform.OrderCenterApi.csproj", "{BCD0D48A-799A-4E5D-875A-78247C9363DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QinGy.MarketPlatform.ApiGateWay", "QinGy.DotnetCore.ApiGateWay\QinGy.MarketPlatform.ApiGateWay.csproj", "{023FB587-1D96-4AC8-AE09-C7B5B2D65230}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OrderCenter", "OrderCenter", "{A487924A-C036-49E2-BD20-66E037E1383B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductCenter", "ProductCenter", "{6C3D45D2-0D31-417F-BC48-F89E6E4BF176}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QinGy.MarketPlatform.ProductCenterEntity", "QinGy.DotNetCoreStudy.ProductEntity\QinGy.MarketPlatform.ProductCenterEntity.csproj", "{D33AA7C7-3A3B-46FF-B5AE-6FB5B33ACF79}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QinGy.MarketPlatform.ProductCenterService", "QinGy.DotNetCoreStudy.ProductService\QinGy.MarketPlatform.ProductCenterService.csproj", "{EC06ADD2-7A59-4749-9F2F-2909ADF9517B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +49,38 @@ Global
 		{6828B478-5231-4394-8EB6-486766513BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6828B478-5231-4394-8EB6-486766513BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6828B478-5231-4394-8EB6-486766513BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEB454DF-BA7E-4793-BCD7-8CE888C2BD3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEB454DF-BA7E-4793-BCD7-8CE888C2BD3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEB454DF-BA7E-4793-BCD7-8CE888C2BD3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEB454DF-BA7E-4793-BCD7-8CE888C2BD3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCD0D48A-799A-4E5D-875A-78247C9363DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD0D48A-799A-4E5D-875A-78247C9363DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD0D48A-799A-4E5D-875A-78247C9363DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD0D48A-799A-4E5D-875A-78247C9363DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{023FB587-1D96-4AC8-AE09-C7B5B2D65230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{023FB587-1D96-4AC8-AE09-C7B5B2D65230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{023FB587-1D96-4AC8-AE09-C7B5B2D65230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{023FB587-1D96-4AC8-AE09-C7B5B2D65230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33AA7C7-3A3B-46FF-B5AE-6FB5B33ACF79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33AA7C7-3A3B-46FF-B5AE-6FB5B33ACF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33AA7C7-3A3B-46FF-B5AE-6FB5B33ACF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33AA7C7-3A3B-46FF-B5AE-6FB5B33ACF79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC06ADD2-7A59-4749-9F2F-2909ADF9517B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC06ADD2-7A59-4749-9F2F-2909ADF9517B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC06ADD2-7A59-4749-9F2F-2909ADF9517B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC06ADD2-7A59-4749-9F2F-2909ADF9517B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DEB454DF-BA7E-4793-BCD7-8CE888C2BD3A} = {6C3D45D2-0D31-417F-BC48-F89E6E4BF176}
+		{BCD0D48A-799A-4E5D-875A-78247C9363DC} = {A487924A-C036-49E2-BD20-66E037E1383B}
+		{023FB587-1D96-4AC8-AE09-C7B5B2D65230} = {B6B8C950-CBA6-4D0B-8D0A-882E2D4299BB}
+		{A487924A-C036-49E2-BD20-66E037E1383B} = {B6B8C950-CBA6-4D0B-8D0A-882E2D4299BB}
+		{6C3D45D2-0D31-417F-BC48-F89E6E4BF176} = {B6B8C950-CBA6-4D0B-8D0A-882E2D4299BB}
+		{D33AA7C7-3A3B-46FF-B5AE-6FB5B33ACF79} = {6C3D45D2-0D31-417F-BC48-F89E6E4BF176}
+		{EC06ADD2-7A59-4749-9F2F-2909ADF9517B} = {6C3D45D2-0D31-417F-BC48-F89E6E4BF176}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {093E397E-76B3-4E48-AE7E-320556E41062}

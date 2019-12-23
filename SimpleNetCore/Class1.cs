@@ -6,3 +6,4 @@ namespace QinGY.DotnetCoreStudy.SimpleNetCore
     {
     }
 }
+ 

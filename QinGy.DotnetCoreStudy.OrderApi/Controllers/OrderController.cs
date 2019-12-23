@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using QinGy.DotnetCoreStudy.OrderApi.Model;
+using QinGy.MarketPlatform.OrderApi.Model;
 
-namespace QinGy.DotnetCoreStudy.OrderApi.Controllers
+namespace QinGy.MarketPlatform.OrderApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -21,14 +21,23 @@ namespace QinGy.DotnetCoreStudy.OrderApi.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
+        [HttpGet("GetAllOrder")]
         public List<OrderInfo> GetAllOrder()
         {
             return null;
         }
-
+        [HttpPost("addorder")]
         public void AddOrder()
         { 
+        
+        }
+        [HttpPost("editorder")]
+        public void EditOrder()
+        { 
+        
+        }
+        [HttpPost("combineorder")]
+        public void CombineOrder() { 
         
         }
     }

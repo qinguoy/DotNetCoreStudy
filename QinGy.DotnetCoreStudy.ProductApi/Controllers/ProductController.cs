@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using QinGy.DotnetCoreStudy.ProductApi.Model;
+using QinGy.MarketPlatform.ProductCenterApi.Model;
 
-namespace QinGy.DotnetCoreStudy.ProductApi.Controllers
+namespace QinGy.MarketPlatform.ProductCenterApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

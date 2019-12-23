@@ -13,7 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace QinGy.DotnetCoreStudy.OrderApi
+namespace QinGy.MarketPlatform.OrderApi
 {
     public class Startup
     {
@@ -31,10 +31,10 @@ namespace QinGy.DotnetCoreStudy.OrderApi
             //添加SwaggerGen，配置api说明xml文档
             services.AddSwaggerGen(p =>
             {
-                p.SwaggerDoc("v1",
+                p.SwaggerDoc("orderapi",
                     new OpenApiInfo { Title = "OrderApi", Version = "v1" }
                     );
-                string xmlPath = Path.Combine(AppContext.BaseDirectory, "QinGy.DotnetCoreStudy.OrderApi.xml"); //程序说明xml文档路径
+                string xmlPath = Path.Combine(AppContext.BaseDirectory, "QinGy.MarketPlatform.OrderApi.xml"); //程序说明xml文档路径
                 p.IncludeXmlComments(xmlPath);
             });
         }
@@ -47,11 +47,12 @@ namespace QinGy.DotnetCoreStudy.OrderApi
                 app.UseDeveloperExceptionPage();
             }
             //注册swagger插件
-            app.UseSwagger();
+            app.UseSwagger(p=>p.RouteTemplate= "{documentName}/swagger.json");
 
             app.UseSwaggerUI(p =>
             {
-                p.SwaggerEndpoint("/swagger/v1/swagger.json", "OrderApi V1");//注意v1是与AddSwaggerGen中指定的名称一致
+                p.SwaggerEndpoint("/orderapi/swagger.json", "orderapi v1");
+               // p.SwaggerEndpoint("/swagger/v1/swagger.json", "OrderApi V1");//注意v1是与AddSwaggerGen中指定的名称一致
             });
 
             app.UseHttpsRedirection();

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace QinGy.DotnetCoreStudy.OrderApi.Model
+namespace QinGy.MarketPlatform.OrderApi.Model
 {
    /// <summary>
    /// 

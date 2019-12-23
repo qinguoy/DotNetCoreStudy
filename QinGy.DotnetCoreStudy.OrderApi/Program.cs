@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace QinGy.DotnetCoreStudy.OrderApi
+namespace QinGy.MarketPlatform.OrderApi
 {
     public class Program
     {

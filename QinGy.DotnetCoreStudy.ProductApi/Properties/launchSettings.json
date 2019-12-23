@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
-    "QinGy.DotnetCoreStudy.ProductApi": {
+    "QinGy.MarketPlatform.ProductCenterApi": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

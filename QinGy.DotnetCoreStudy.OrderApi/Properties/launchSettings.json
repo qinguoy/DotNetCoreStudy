@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "QinGy.DotnetCoreStudy.OrderApi": {
+    "QinGy.MarketPlatform.OrderApi": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger/index.html",
