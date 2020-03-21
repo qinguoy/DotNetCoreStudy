@@ -27,6 +27,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QinGy.MarketPlatform.Produc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QinGy.MarketPlatform.ProductCenterService", "QinGy.DotNetCoreStudy.ProductService\QinGy.MarketPlatform.ProductCenterService.csproj", "{EC06ADD2-7A59-4749-9F2F-2909ADF9517B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Disease", "Disease", "{B7300138-1857-4823-8050-F98130FF8B26}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiseaseDataPlatform.DiseaseEntity", "DiseaseDataPlatform.DiseaseEntity\DiseaseDataPlatform.DiseaseEntity.csproj", "{2538AF36-D165-45B7-8C9B-8B040C5B8E57}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiseaseDataPlatform.WebApi", "DiseaseDataPlatform.WebApi\DiseaseDataPlatform.WebApi.csproj", "{A719B04B-2F1C-4731-BF51-3A1B06CD80C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Qingy.DotNetCoreStudy.HangfireManagement", "Qingy.DotNetCoreStudy.HangfireManagement\Qingy.DotNetCoreStudy.HangfireManagement.csproj", "{FE1E8BCB-FB62-4BB3-8AD8-1D1946DB2EA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HnagfireJob", "HnagfireJob", "{7C442433-8FF9-4774-BD5A-896108165A01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qingy.DotNetCoreStudy.HangfireJobEntity", "Qingy.DotNetCoreStudy.HangfireJobEntity\Qingy.DotNetCoreStudy.HangfireJobEntity.csproj", "{506B6057-24D8-447E-A323-B3B7E24B0124}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +81,22 @@ Global
 		{EC06ADD2-7A59-4749-9F2F-2909ADF9517B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC06ADD2-7A59-4749-9F2F-2909ADF9517B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC06ADD2-7A59-4749-9F2F-2909ADF9517B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2538AF36-D165-45B7-8C9B-8B040C5B8E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2538AF36-D165-45B7-8C9B-8B040C5B8E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2538AF36-D165-45B7-8C9B-8B040C5B8E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2538AF36-D165-45B7-8C9B-8B040C5B8E57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A719B04B-2F1C-4731-BF51-3A1B06CD80C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A719B04B-2F1C-4731-BF51-3A1B06CD80C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A719B04B-2F1C-4731-BF51-3A1B06CD80C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A719B04B-2F1C-4731-BF51-3A1B06CD80C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE1E8BCB-FB62-4BB3-8AD8-1D1946DB2EA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE1E8BCB-FB62-4BB3-8AD8-1D1946DB2EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE1E8BCB-FB62-4BB3-8AD8-1D1946DB2EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE1E8BCB-FB62-4BB3-8AD8-1D1946DB2EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{506B6057-24D8-447E-A323-B3B7E24B0124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{506B6057-24D8-447E-A323-B3B7E24B0124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{506B6057-24D8-447E-A323-B3B7E24B0124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{506B6057-24D8-447E-A323-B3B7E24B0124}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +109,10 @@ Global
 		{6C3D45D2-0D31-417F-BC48-F89E6E4BF176} = {B6B8C950-CBA6-4D0B-8D0A-882E2D4299BB}
 		{D33AA7C7-3A3B-46FF-B5AE-6FB5B33ACF79} = {6C3D45D2-0D31-417F-BC48-F89E6E4BF176}
 		{EC06ADD2-7A59-4749-9F2F-2909ADF9517B} = {6C3D45D2-0D31-417F-BC48-F89E6E4BF176}
+		{2538AF36-D165-45B7-8C9B-8B040C5B8E57} = {B7300138-1857-4823-8050-F98130FF8B26}
+		{A719B04B-2F1C-4731-BF51-3A1B06CD80C2} = {B7300138-1857-4823-8050-F98130FF8B26}
+		{FE1E8BCB-FB62-4BB3-8AD8-1D1946DB2EA6} = {7C442433-8FF9-4774-BD5A-896108165A01}
+		{506B6057-24D8-447E-A323-B3B7E24B0124} = {7C442433-8FF9-4774-BD5A-896108165A01}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {093E397E-76B3-4E48-AE7E-320556E41062}

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -38,6 +39,7 @@ namespace QinGy.MarketPlatform.ProductCenterApi
                 string xmlPath = Path.Combine(AppContext.BaseDirectory, "QinGy.MarketPlatform.ProductCenterApi.xml"); //程序说明xml文档路径
                 p.IncludeXmlComments(xmlPath);
             });
+            services.AddDbContext<ProductCenterEntity.ProductCenterContext>(p => p.UseMySql(Configuration.GetConnectionString("ProductcenterConnection"), c => c.MigrationsAssembly("QinGy.MarketPlatform.ProductCenterApi")));
 
         }
 

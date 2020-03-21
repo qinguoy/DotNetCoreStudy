@@ -5,22 +5,26 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\netcoreapp3.1\QinGy.MarketPlatform.ProductCenterApi.xml</DocumentationFile>
+    <DocumentationFile>bin\netcoreapp3.1\DiseaseDataPlatform.WebApi.xml</DocumentationFile>
     <OutputPath>bin</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Hangfire" Version="1.7.9" />
+    <PackageReference Include="Hangfire.MySql.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QinGy.DotNetCoreStudy.ProductEntity\QinGy.MarketPlatform.ProductCenterEntity.csproj" />
-    <ProjectReference Include="..\QinGy.DotNetCoreStudy.ProductService\QinGy.MarketPlatform.ProductCenterService.csproj" />
+    <ProjectReference Include="..\DiseaseDataPlatform.DiseaseEntity\DiseaseDataPlatform.DiseaseEntity.csproj" />
   </ItemGroup>
 
 

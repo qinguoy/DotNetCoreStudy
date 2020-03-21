@@ -11,6 +11,8 @@ namespace QinGy.MarketPlatform.ProductCenterEntity
         public Guid Id { get; set; }
         [MaxLength(50)]
         public string Sku { get; set; }
+        [MaxLength(80)]
+        public string ProductId { get; set; }
         [MaxLength(250)]
         public string Title { get; set; }
         [MaxLength(2000)]

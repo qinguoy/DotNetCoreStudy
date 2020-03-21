@@ -5,12 +5,16 @@ using System.Text;
 
 namespace QinGy.MarketPlatform.ProductCenterEntity
 {
-    public class ProductCenterContext: DbContext
-    { 
-        private string _ConnectionStringName = "OrderSystemConnectionString";
-        public ProductCenterContext()
+    public class ProductCenterContext : DbContext
+    {
+
+        //public ProductCenterContext()
+        //{
+        //    //  Database.EnsureCreated();  //确保数据库已生成（存在） 
+        //}
+        public ProductCenterContext(DbContextOptions<ProductCenterContext> options)
+      : base(options)
         {
-            //  Database.EnsureCreated();  //确保数据库已生成（存在） 
         }
         /// <summary>
         /// 配置
@@ -18,8 +22,8 @@ namespace QinGy.MarketPlatform.ProductCenterEntity
         /// <param name="optionsBuilder"></param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = "Server=127.0.0.1;DataBase=ProductCenter;User Id=root;password=123456";
-            optionsBuilder.UseMySql(connectionString);
+            //string connectionString = "Server=127.0.0.1;DataBase=ProductCenter;User Id=root;password=123456";
+            //optionsBuilder.UseMySql(connectionString);
             base.OnConfiguring(optionsBuilder);
         }
 

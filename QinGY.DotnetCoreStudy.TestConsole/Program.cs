@@ -2,6 +2,7 @@
 using QinGY.DotnetCoreStudy.SimpleNetCore.FileSystem;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 
 namespace QinGY.DotnetCoreStudy.TestConsole
 {
@@ -9,11 +10,26 @@ namespace QinGY.DotnetCoreStudy.TestConsole
     {
         static void Main(string[] args)
         {
-            PublishTest.Test();
+            //  PublishTest.Test();
             //FileSystemTester tester = new FileSystemTester();
             //tester.TestPhysicalFile();
             //Console.WriteLine("Hello World!");
+
+
+            TestHttpClient();
             Console.Read();
+        }
+
+        private async static void TestHttpClient()
+        {
+            for (int i = 0; i < 15; i++)
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    var result = await client.GetAsync("http://aspnetmonsters.com/");
+                    Console.WriteLine(result.StatusCode);
+                }
+            }
         }
 
         private static void ShowInfo(Action<string,DateTime> show)

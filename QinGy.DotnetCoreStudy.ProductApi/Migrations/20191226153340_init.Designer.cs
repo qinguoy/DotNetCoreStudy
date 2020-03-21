@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QinGy.MarketPlatform.ProductCenterEntity;
 
-namespace QinGy.MarketPlatform.ProductCenterEntity.Migrations
+namespace QinGy.MarketPlatform.ProductCenterApi.Migrations
 {
     [DbContext(typeof(ProductCenterContext))]
-    [Migration("20191223155521_20191223001")]
-    partial class _20191223001
+    [Migration("20191226153340_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -96,6 +96,10 @@ namespace QinGy.MarketPlatform.ProductCenterEntity.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(65,30)");
+
+                    b.Property<string>("ProductId")
+                        .HasColumnType("varchar(80) CHARACTER SET utf8mb4")
+                        .HasMaxLength(80);
 
                     b.Property<int>("ProductType")
                         .HasColumnType("int");
